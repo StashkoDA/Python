@@ -8,7 +8,7 @@ s = int(input('Введите общее кол-во журавликов: '))
 pet = None
 kat = None
 ser = None
-pet = int(s / 4)
+pet = int(s / 6)
 ser = pet
-kat = 2*pet
-print(f'Петя сдела {pet}, Катя сделала {kat}, Серёжа сделал {ser} журавликов')
+kat = 4*pet
+print(f'Петя сделал {pet}, Катя сделала {kat}, Серёжа сделал {ser} журавликов')
