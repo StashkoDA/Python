@@ -70,23 +70,24 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
-# N = int(input('Введите кол-во рассмативемых дней от 1 до 100: '))
-# temp = []
-# i = 1
-# while i <= N:
-#     t = int(input(f'Введите тумпературу {i} дня: '))
-#     temp.append(t)
-#     i += 1
-# count = 0
-# res = 0
-# for t in temp:
-#     if t > 0:
-#         count += 1
-#     else:
-#         if count > res:
-#             res = count
-#             count = 0
-# print(f'{res} -> {temp}')
+N = int(input('Введите кол-во рассмативемых дней от 1 до 100: '))
+temp = []
+i = 1
+while i <= N:
+    t = int(input(f'Введите тумпературу {i} дня: '))
+    temp.append(t)
+    i += 1
+
+count = 0
+res = 0
+for t in temp:
+    if t > 0:
+        count += 1
+    else:
+        if count > res:
+            res = count
+        count = 0
+print(f'{res} -> {temp}')
 
 
 # Задача №15.
