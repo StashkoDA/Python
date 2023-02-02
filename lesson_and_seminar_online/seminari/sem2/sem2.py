@@ -70,24 +70,24 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
-N = int(input('Введите кол-во рассмативемых дней от 1 до 100: '))
-temp = []
-i = 1
-while i <= N:
-    t = int(input(f'Введите тумпературу {i} дня: '))
-    temp.append(t)
-    i += 1
+# N = int(input('Введите кол-во рассмативемых дней от 1 до 100: '))
+# temp = []
+# i = 1
+# while i <= N:
+#     t = int(input(f'Введите тумпературу {i} дня: '))
+#     temp.append(t)
+#     i += 1
 
-count = 0
-res = 0
-for t in temp:
-    if t > 0:
-        count += 1
-    else:
-        if count > res:
-            res = count
-        count = 0
-print(f'{res} -> {temp}')
+# count = 0
+# res = 0
+# for t in temp:
+#     if t > 0:
+#         count += 1
+#     else:
+#         if count > res:
+#             res = count
+#         count = 0
+# print(f'{res} -> {temp}')
 
 
 # Задача №15.
@@ -111,11 +111,23 @@ print(f'{res} -> {temp}')
 #     w = int(input(f'Введите вес (кг) {i} арбуза: '))
 #     watermelons.append(w)
 #     i += 1
-# max = watermelons[0]
-# min = watermelons[0]
+# maxW = watermelons[0]
+# minW = watermelons[0]
 # for j in range(len(watermelons)):
-#     if watermelons[j] > max:
-#         max = watermelons[j]
-#     elif watermelons[j] < min:
-#         min = watermelons[j]
-# print(min, max)
+#     if watermelons[j] > maxW:
+#         maxW = watermelons[j]
+#     elif watermelons[j] < minW:
+#         minW = watermelons[j]
+# print(minW, maxW)
+
+# # или без списков:
+# n = int(input('Введите кол-во арбузов: '))
+# minW = 100
+# maxW = 0
+# for w in range(1, n+1):
+#     mass = int(input(f'введите вес {w} арбуза: '))
+#     if mass > maxW:
+#         maxW = mass
+#     elif mass < minW:
+#         minW = mass
+# print(minW,maxW)
