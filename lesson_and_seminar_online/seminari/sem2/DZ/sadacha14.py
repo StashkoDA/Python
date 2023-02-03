@@ -11,6 +11,7 @@ def getdegree(n, k, res):
     return res
 
 n = int(input('Введите целое число больше 0: '))
+print(f'{n} -> ')
 k = 0
 res = 0
 result = getdegree (n, k, res)
