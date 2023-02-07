@@ -6,12 +6,13 @@ def getdegree(n, k, res):
     while res <= n:
         res = 2**k
         if res <= n:
-            print(res)
+            print(res, end = ' ')
         k += 1
     return res
 
 n = int(input('Введите целое число больше 0: '))
-print(f'{n} -> ')
+print(f'{n} -> ', end = ' ')
 k = 0
 res = 0
 result = getdegree (n, k, res)
+print()
