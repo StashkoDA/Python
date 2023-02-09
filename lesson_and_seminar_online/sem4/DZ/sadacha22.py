@@ -10,11 +10,10 @@
 
 n = int(input('Введите кол-во элементов первого множества: '))
 m = int(input('Введите кол-во элементов второго множества: '))
-n_list = [input('Введите элементы первого множества: ') for i in range(n)]
-m_list = [input('Введите элементы второго множества: ') for i in range(m)]
-result = list(set(n_list).intersection(set(m_list)))
-sorted(result)
+n_list = [int(input('Введите элементы первого множества: ')) for i in range(n)]
+m_list = [int(input('Введите элементы второго множества: ')) for i in range(m)]
+result = set(n_list).intersection(set(m_list))
 print(result)
 print(*n_list)
 print(*m_list)
-print(*result)
+print(*sorted(result))
