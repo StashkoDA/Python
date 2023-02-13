@@ -10,14 +10,12 @@
 # shore shells
 # Output: 13
 
-text = input('Введите текст: ')
+text = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure. So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
 d = dict()
-count = 0
 text = text.replace(".","")
 text = text.replace(",","")
-print(text)
 text = text.lower()
 print(text)
 text = text.split()
-text = list(set(text))
-print(len(text))
+print(set(text))
+print(len(set(text)))
