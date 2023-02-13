@@ -62,7 +62,7 @@ for i in m_list:
     else:
         res.append(f'{i}_{d.get(i)}')
         d[i] = d.get(i) + 1
-print(res)
+print(*res)
 
 
 # или
@@ -72,12 +72,30 @@ print(res)
 # result_dic = {} #dictionary в который будем класть счетчики какой символ сколько раз встречается
 # new_s = [] # новый лист в который будем класть по условию в задаче
 # for i in s:
-# if i not in result_dic: # если еще нет в словаре, первый раз
-# new_s.append(i) # кладем наш символ
-# # print(i)
-# result_dic[i] = result_dic.get(i, 0)+ 1 # с помощью метода get возвращаем в словарь наш символ искусственно добавляя 1
-# else: # если уже есть в словаре, значит пошли повторы
-# new_s.append(f'{i}_{result_dic[i]}') # кладем значение с постфиксом и значение из словаря
-# # print(f'{i}_{result[i]}')
-# result_dic[i] = result_dic.get(i, 0) + 1
+    # if i not in result_dic: # если еще нет в словаре, первый раз
+        # new_s.append(i) # кладем наш символ
+        # # print(i)
+        # result_dic[i] = result_dic.get(i, 0)+ 1 # с помощью метода get возвращаем в словарь наш символ искусственно добавляя 1
+    # else: # если уже есть в словаре, значит пошли повторы
+        # new_s.append(f'{i}_{result_dic[i]}') # кладем значение с постфиксом и значение из словаря
+        # # print(f'{i}_{result[i]}')
+        # result_dic[i] = result_dic.get(i, 0) + 1
 # print(*new_s)
+
+
+# или
+# text = 'a a a b c a a d c d d'
+# text = text.split()
+# result = ''
+# d = {}
+# for i in range(len(text)):
+# if text[i] not in d:
+# d[text[i]] = 1
+# result += f'{text[i]} '
+# else:
+# result += f'{text[i]}_{d[text[i]]} '
+# d[text[i]] += 1
+
+
+# print(result)
+# print(d)
