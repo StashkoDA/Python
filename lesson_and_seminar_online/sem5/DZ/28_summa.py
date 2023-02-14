@@ -5,6 +5,21 @@
 # 2 2
 # 4
 
+# def sum(a, b):
+#     if b == 0:
+#         return a
+#     return sum(a, b-1) + 1
+
+# a = int(input('Введите первое число: '))
+# b = int(input('Введите второе число: '))
+
+# for i in range(b+1):
+#     sum(a, i)
+#     if i == b:
+#         print(sum(a, i))
+
+# без циклов: 
+
 def sum(a, b):
     if b == 0:
         return a
@@ -12,8 +27,5 @@ def sum(a, b):
 
 a = int(input('Введите первое число: '))
 b = int(input('Введите второе число: '))
-summa = a
-for i in range(b+1):
-    sum(a, i)
-    if i == b:
-        print(sum(a, i))
+
+print(sum(a, b))
