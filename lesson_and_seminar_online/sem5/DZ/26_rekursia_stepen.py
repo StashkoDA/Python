@@ -7,12 +7,12 @@
 def getDegree(m, n):
     if n == 0:
         return 1
-    return m
+    return getDegree(m, n-1) * m
 
 a = int(input('Введите первое число: '))
 b = int(input('Введите второе число: '))
-c = 1
+
 for i in range(b+1):
-    c = c * getDegree(a, i)
+    getDegree(a, i)
     if i == b:
-        print(f'A = {a}, B = {b}, {a}^{b} -> {c}')
+        print(f'A = {a}, B = {b}, {a}^{b} -> {getDegree(a, i)}')
