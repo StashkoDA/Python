@@ -7,8 +7,6 @@
 def getDegree(m, n):
     if n == 0:
         return 1
-    elif n == 1:
-        return m
     return m
 
 a = int(input('Введите первое число: '))
