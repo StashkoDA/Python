@@ -12,7 +12,4 @@ def getDegree(m, n):
 a = int(input('Введите первое число: '))
 b = int(input('Введите второе число: '))
 
-for i in range(b+1):
-    getDegree(a, i)
-    if i == b:
-        print(f'A = {a}, B = {b}, {a}^{b} -> {getDegree(a, i)}')
+print(f'A = {a}, B = {b}, {a}^{b} -> {getDegree(a, b)}')
