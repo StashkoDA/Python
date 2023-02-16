@@ -16,7 +16,18 @@ def fibo(a):
 
 n = int(input('Введите искомое число: '))
 list_f = []
-for i in range(n+1):
+
+# for i in range(n):
+#     list_f.append(fibo(i))
+# print(list_f)
+# print(list_f[n-1])
+
+# # или
+i = 0
+while i < n:
     list_f.append(fibo(i))
-print(list_f)
-print(list_f[n])
+    if i == n-1:
+        print(list_f)
+        print(list_f[i])
+        break
+    i += 1
