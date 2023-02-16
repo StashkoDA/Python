@@ -10,7 +10,7 @@
 import random
 n = int(input('Введите кол-во оценок: '))
 l_estimates = [random.randint(1, 5) for i in range(n)]
-print(l_estimates)
+print(*l_estimates)
 min = 5
 max = 1
 l_new = []
@@ -25,4 +25,4 @@ for i in l_estimates:
         l_new.append(i)
     else:
         l_new.append(i)
-print(l_new)
+print(*l_new)
