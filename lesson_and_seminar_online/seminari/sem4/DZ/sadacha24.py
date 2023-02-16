@@ -17,8 +17,8 @@ i = int(input('Введите кол-во кустов: '))
 ai_list = [input(f'Введите ягод на {i} кусте: ') for i in range(1, i+1)]
 print(f'{i} -> ', *ai_list)
 summ = 0
-for j in range(1, i-1):
-    res = int(ai_list[j-1]) + int(ai_list[j]) + int(ai_list[j+1])
+for j in range(i):
+    res = int(ai_list[j]) + int(ai_list[j-1]) + int(ai_list[j-2])
     if res > summ:
         summ = res
 print(summ)
