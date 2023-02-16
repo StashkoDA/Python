@@ -11,18 +11,29 @@ import random
 n = int(input('Введите кол-во оценок: '))
 l_estimates = [random.randint(1, 5) for i in range(n)]
 print(*l_estimates)
-min = 5
-max = 1
-l_new = []
+
+
+# min = 5
+# max = 1
+# l_new = []
+# for i in l_estimates:
+#     if i < min:
+#         min = i
+#     if i > max:
+#         max = i
+# for i in l_estimates:
+#     if i == max:
+#         i = min
+#         l_new.append(i)
+#     else:
+#         l_new.append(i)
+# print(*l_new)
+
+# или:
+
+maxx = max(l_estimates)
+minn = min(l_estimates)
 for i in l_estimates:
-    if i < min:
-        min = i
-    if i > max:
-        max = i
-for i in l_estimates:
-    if i == max:
-        i = min
-        l_new.append(i)
-    else:
-        l_new.append(i)
-print(*l_new)
+    if l_estimates[i] == maxx:
+        l_estimates[i] = minn
+print(*l_estimates)
