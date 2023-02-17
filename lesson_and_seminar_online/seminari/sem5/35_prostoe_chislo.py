@@ -6,8 +6,13 @@
 # Input: 5
 # Output: yes
 
+def prime_number(a):
+    if a != 0 and a % a == 0 and a / 1 == a:
+        return 'yes'
+    elif int(a) == 0:
+        return 'Вы ввели ноль'
+    else:
+        return 'no'
+
 n = float(input('Введите число: '))
-if n % n == 0 and n / 1 == n:
-    print('yes')
-else:
-    print('no')
+print(prime_number(n))
