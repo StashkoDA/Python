@@ -31,3 +31,7 @@ while i < n:
         print(list_f[i])
         break
     i += 1
+
+# или
+
+# print(fibo(n-1))
