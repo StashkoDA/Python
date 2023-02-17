@@ -33,7 +33,7 @@ print(*l_estimates)
 
 maxx = max(l_estimates)
 minn = min(l_estimates)
-for i in l_estimates:
+for i in range(n):
     if l_estimates[i] == maxx:
         l_estimates[i] = minn
 print(*l_estimates)
