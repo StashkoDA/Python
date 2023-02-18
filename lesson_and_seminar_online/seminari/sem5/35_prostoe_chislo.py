@@ -29,7 +29,7 @@
 # или ///////////
 
 def prime_number(a):
-    num_list = list(range(2, a))
+    num_list = list(range(2, int(a ** 0.5) + 1))
     for i in num_list:
         if a % i == 0:
             return 'no'
