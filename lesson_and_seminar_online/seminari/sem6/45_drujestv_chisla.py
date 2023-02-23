@@ -15,3 +15,16 @@
 # Ввод:       Вывод:
 # 300         220 284
 
+k = int(input('Введите число k: '))
+
+sum_dict = dict()
+for i in range(1, k + 1):
+    sum_dict[i] = 1
+    for j in range(2, (i//2+1)):
+        if i % j == 0:
+            sum_dict[i] += j
+
+for i in range(1, len(sum_dict) + 1):
+    for j in range(i + 1, len(sum_dict) + 1):
+        if i == sum_dict[j] and j == sum_dict[i]:
+            print(i, j)
