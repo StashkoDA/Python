@@ -9,9 +9,13 @@
 # 1 2 3 2 3       2
 
 import random
-arr = [random.randint(1, 10) for i in range(10)]
+n = 10
+arr = [random.randint(1, 10) for i in range(n)]
 count = 0
 
-for i in set(arr):
-    count += arr.count(i) - 1
+for i in range(n-1):
+    for j in range(i+1, n):
+        if arr[i] == arr[j]:
+            count += 1
+
 print(arr, count)
