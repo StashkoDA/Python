@@ -15,8 +15,5 @@ min2 = int(input('Введите искомый минимум элементо�
 
 num = [random.randint(min1, max1) for i in range(n)]
 print(num)
-res = []
-for i in range(n):
-    if min2 < num[i] < max2:
-        res.append(i)
+res = [i for i in range(n) if min2 <= num[i] <= max2]
 print(res)
