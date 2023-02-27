@@ -28,3 +28,6 @@ if values == transformed_values:
   print('ok')
 else:
   print('fail')
+
+# или ///////////////
+# print('ok' if values == transformed_values else 'fail')
