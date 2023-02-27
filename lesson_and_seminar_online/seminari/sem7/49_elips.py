@@ -27,12 +27,12 @@ def find_farthest_orbit(list_of_orbits):
     res = tuple()
     max_s=0
     for i in list_of_orbits:
-        s = pi*int(i[0])*int(i[1])
+        if i[0] != i[1]:            # убираем круговые орбиты по условию
+            s = int(i[0])*int(i[1])
         if s > max_s:
             max_s = s
             res = i
     return res
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
-pi = 3.14
 print(*find_farthest_orbit(orbits))
