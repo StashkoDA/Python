@@ -36,3 +36,16 @@ def find_farthest_orbit(list_of_orbits):
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 print(*find_farthest_orbit(orbits))
+
+# или ///////
+# from math import pi
+# orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+# maximum = max(list(map(lambda x:pi*x[0]*x[1] ,(filter(lambda i: i[0]!=i[1], orbits)))))
+# far = filter(lambda y:pi*y[0]*y[1] == maximum, orbits)
+# print(*list(far))
+
+# или ///////
+# from functools import reduce
+# orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+# elliptic_orbits = list(filter(lambda x: x[0] != x[1], orbits))
+# print(reduce(lambda x, y: x if x[0] * x[1] > y[0] * y[1] else y, elliptic_orbits))
