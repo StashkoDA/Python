@@ -11,20 +11,8 @@
 # 4. Использование функций. Ваша программа
 # не должна быть линейной
 
-# colors = ['red', 'green', 'blue']
-# data = open('file.txt', 'a')
-# data.writelines(colors)
-# data.close()
 
-# Вывод заголовка программы:
-print("\n~ Добро пожаловать в телефонный справочник! ~") 
- 
-# Создадим файл для хранения контактов:
-filename = "myphonebook.txt" 
-myfile = open(filename, "a+") 
-myfile.close 
- 
-# зададим главное меню
+# Зададим главное меню
 def main_menu(): 
     print("\nГлавное меню\n") 
     print("1. Показать все контакты") 
@@ -57,7 +45,7 @@ def main_menu():
         enter = input( "Нажмите Enter, чтобы продолжить ...") 
         main_menu() 
  
-# зададим функцию поиска        
+# Зададим функцию поиска        
 def searchcontact(): 
     searchname = input( "Введите имя для поиска контакта: ") 
     remname = searchname[1:] 
@@ -107,5 +95,13 @@ def newcontact():
     myfile = open(filename, "a") 
     myfile.write(contactDetails) 
     print("Контактные данные:\n " + contactDetails + "\nуспешно сохранены!") 
+
+# Вывод заголовка программы:
+print("\n~ Добро пожаловать в телефонный справочник! ~") 
  
+# Создадим файл для хранения контактов:
+filename = "myphonebook.txt" 
+myfile = open(filename, "a+") 
+myfile.close 
+
 main_menu()
