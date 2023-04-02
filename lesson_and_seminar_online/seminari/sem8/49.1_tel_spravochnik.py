@@ -108,7 +108,7 @@ def newcontact():
 
 # Редактирование
 def editing(): 
-    editingname = input("Введите имя для редактирования контакта: ")
+    editingname = input("Введите контакт для редактирования: ")
     remname = editingname[1:] 
     firstchar = editingname[0] 
     editingname = firstchar.upper() + remname # Приводим введённый запрос с заглавной буквы
@@ -126,7 +126,11 @@ def editing():
             remname = olddata[1:] 
             firstchar = olddata[0] 
             olddata = firstchar.upper() + remname
+
             newdata = input('Введите новый параметр: ')
+            remname = newdata[1:] 
+            firstchar = newdata[0] 
+            newdata = firstchar.upper() + remname
 
             with open(filename, 'r') as file:
                 data = file.read()
@@ -164,11 +168,11 @@ def removal():
                 with open(filename, 'r') as fr:
                     text = fr.readlines()
  
-                    with open(filename, 'w') as fw:
-                        for txt in text:
-                            if txt.strip('\n') != z:
-                                fw.write(txt)
-                print("Контакт удалён")
+                with open(filename, 'w') as fw:
+                    for txt in text:
+                        if txt != z:
+                            fw.write(txt)
+                    print("Контакт удалён")
             
             found = True 
             break 
