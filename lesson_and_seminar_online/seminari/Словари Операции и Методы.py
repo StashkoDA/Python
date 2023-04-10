@@ -199,3 +199,35 @@ print(new_users)  # выведет {0: [0, 'Bob', 'password'], 1: [1, 'code', 'p
 
 # Поменять местами ключи и значения
 {word_id:word for (word,word_id) in namt_dict.items()} # меняем в нашем словаре ключи со значениями
+
+
+#########
+my_dict = {1: 'one', 2: 'two', 'three': 3, 'Иванов': 'Петр', 'Петров': 'Иван'}
+
+print(my_dict[2]) # two
+print(my_dict['Иванов'])  # Петр
+
+print(my_dict) # {1: 'one', 2: 'two', 'three': 3, 'Иванов': 'Петр', 'Петров': 'Иван'}
+print(type(my_dict)) # <class 'dict'>
+print(my_dict.items()) # dict_items([(1, 'one'), (2, 'two'), ('three', 3), ('Иванов', 'Петр'), ('Петров', 'Иван')])
+print(type(my_dict.items())) # <class 'dict_items'>
+print(my_dict.keys()) # dict_keys([1, 2, 'three', 'Иванов', 'Петров'])
+print(type(my_dict.keys()))  # <class 'dict_keys'>
+print(my_dict.values())  # dict_values(['one', 'two', 3, 'Петр', 'Иван'])
+print(type(my_dict.values()))  # <class 'dict_values'>
+print(list(my_dict.values())[2])  # 3
+
+new_dict = list(my_dict.items())
+print(dict(new_dict))  # {1: 'one', 2: 'two', 'three': 3, 'Иванов': 'Петр', 'Петров': 'Иван'}
+
+#######
+
+dict1 = [[1,11],[2,22],[3,33], [1, 123], [2,234], [(23,34,45), (234,345,456)]]
+dict2 = ((1,111),(2,222),(3,333))
+dict3 = [(1,1111),(2,2222),(3,3333)]
+dict4 = ([1,11111],[2,22222],[3,33333])
+
+print(dict(dict1))  # {1: 123, 2: 234, 3: 33, (23, 34, 45): (234, 345, 456)}
+print(dict(dict2))  # {1: 111, 2: 222, 3: 333}
+print(dict(dict3))  # {1: 1111, 2: 2222, 3: 3333}
+print(dict(dict4))  # {1: 11111, 2: 22222, 3: 33333}
