@@ -1,3 +1,5 @@
+# https://www.w3schools.com/python/ref_func_sorted.asp
+
 *a - раскрывание итерируемого объекта
 
 Создать словарь:
@@ -231,3 +233,67 @@ print(dict(dict1))  # {1: 123, 2: 234, 3: 33, (23, 34, 45): (234, 345, 456)}
 print(dict(dict2))  # {1: 111, 2: 222, 3: 333}
 print(dict(dict3))  # {1: 1111, 2: 2222, 3: 3333}
 print(dict(dict4))  # {1: 11111, 2: 22222, 3: 33333}
+
+#######################
+
+my_dict = {1: 'one', 2: 'two', 'three': 3, 'Иванов': 'Петр', 'Петров': 'Иван'}
+
+for elem in my_dict:
+  print(elem, end=' ') # 1 2 three Иванов Петров
+print()
+
+for elem in my_dict.keys():
+  print(elem, end=' ') # 1 2 three Иванов Петров
+
+print()
+for elem in my_dict.values():
+  print(elem, end=' ') # one two 3 Петр Иван
+
+print()
+for key, value in my_dict.items():
+  print(key, value) 
+# 1 one
+# 2 two
+# three 3
+# Иванов Петр
+# Петров Иван
+
+print()
+for a,b,*c,d in [[12,23,34,45,56,34],(1,2,3,4,5),(12,23,3,4)]:
+  print(a,b,c,d, sep='----')
+# 12----23----[34, 45, 56]----34
+# 1----2----[3, 4]----5
+# 12----23----[3]----4
+
+#######
+
+my_dict = {1: 'one', 2: 'two', 'three': 3, 'Иванов': 'Петр', 'Петров': 'Иван'}
+
+# Сортировка Словарей:
+
+for i in sorted(my_dict): # - сортировка словаря по ключам
+print(i, my_dict[i])
+
+print(sorted(my_dict)) #'1' 'f'
+
+for i in sorted(my_dict.values()): # - сортировка по значениям (вывод без ключей)
+print(i)
+
+for i in sorted(my_dict.items(),key=lambda para: para[1]): # - сортировка по значениям, вывод с ключами
+print(i)
+
+for i in sorted(dict.items(),key=lambda para: (para[1],para[0])): # - сортировка по значениям, затем пары с совпадающими значениями сортируются по ключам
+print(i)
+
+for i in sorted(dict.items(),key=lambda para: (-para[1],para[0])): - сортировка по значениям в обратном порядке(если это цифры), затем пары с совпадающими значениями сортируются по ключам в обычном порядке
+print(i)
+
+#######
+my_dict = {1: [23,34,45,(12,34,45,56,{11: 1111,22: 'Правильный ответ',33: 333})],
+2: 'two',
+9: '3',
+45: 'Петр',
+12: 'Иван'
+}
+
+print(my_dict[1][3][4][22])
