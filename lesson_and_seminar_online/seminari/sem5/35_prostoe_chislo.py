@@ -28,28 +28,28 @@
 
 # или ///////////
 
-# def prime_number(a):
-#     num_list = list(range(2, int(a ** 0.5) + 1))
-#     for i in num_list:
-#         if a % i == 0:
-#             return 'no'
-#     return 'yes'
+def prime_number(a):
+    num_list = list(range(2, int(a ** 0.5) + 1))
+    for i in num_list:
+        if a % i == 0:
+            return 'no'
+    return 'yes'
 
-# n = int(input('Введите число: '))
-# print(prime_number(n))
+n = int(input('Введите число: '))
+print(prime_number(n))
 
 # или ///////////
 
-def prime(n):
-    i = 2
-    flag = True
-    while i < n and flag: # расскажите про метод флажка
-        if n % i == 0:
-            flag = False
-        i += 1
-    if flag:
-        return 'yes'
-    return 'no'
+# def prime(n):
+#     i = 2
+#     flag = True
+#     while i < n and flag: # расскажите про метод флажка
+#         if n % i == 0:
+#             flag = False
+#         i += 1
+#     if flag:
+#         return 'yes'
+#     return 'no'
 
-n = int(input('Введите число: '))
-print(prime(n))
+# n = int(input('Введите число: '))
+# print(prime(n))
